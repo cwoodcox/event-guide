@@ -3,11 +3,33 @@ FORMAT: 1A
 # event-guide
 Event Guide manages the data for conference mobile apps to give information to guests.
 
-# Group Pages
-Pages related resources of the **Pages API**
+# Group Events
+Events related resources of the **Event Guide API**
 
-## Pages Collection [/pages]
+## Events Collection [/events.json]
+### List all Events [GET]
+
++ Response 200 (application/json)
+
+        [{
+          "id": 1,
+          "name": "IHG Conference",
+          "pages": { }
+        }]
+
+### Show an Event [GET]
+
++ Parameters
+    + id (required, number, `1`) Numeric `id` of the event.
+
+# Group Pages
+Pages related resources of the **Event Guide API**
+
+## Pages Collection [/events/:id/pages.json]
 ### List all Pages [GET]
+
++ Parameters
+    + event_id (required, number, '1') Numeric `id` of the event to show the events.
 
 + Response 200 (application/json)
 

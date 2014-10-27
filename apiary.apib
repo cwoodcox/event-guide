@@ -1,19 +1,29 @@
 FORMAT: 1A
 
 # event-guide
-Notes API is a *short texts saving* service similar to its physical paper presence on your table.
+Event Guide manages the data for conference mobile apps to give information to guests.
 
-# Group Notes
-Notes related resources of the **Notes API**
+# Group Pages
+Pages related resources of the **Pages API**
 
-## Notes Collection [/notes]
-### List all Notes [GET]
+## Pages Collection [/pages]
+### List all Pages [GET]
 + Response 200 (application/json)
 
         [{
-          "id": 1, "title": "Jogging in park"
+          "id": 1, "title": "General Info"
         }, {
-          "id": 2, "title": "Pick-up posters from post-office"
+          "id": 2, "title": "Schedule"
+        }, {
+          "id": 3, "title": "Speakers"
+        }, {
+          "id": 4, "title": "Sponsors"
+        }, {
+          "id": 5, "title": "Exhibit Map"
+        }, {
+          "id": 6, "title": "Transportation"
+        }, {
+          "id": 7, "title": "Eat•See•Shop•Sip"
         }]
 
 ### Create a Note [POST]

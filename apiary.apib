@@ -8,32 +8,66 @@ Pages related resources of the **Pages API**
 
 ## Pages Collection [/pages]
 ### List all Pages [GET]
+
 + Response 200 (application/json)
 
         [{
-          "id": 1, "title": "General Info"
+          "id": 1,
+          "title": "General Info",
+          "display": { "order": 1, "type": "button" }
         }, {
-          "id": 2, "title": "Schedule"
+          "id": 2, 
+          "title": "Schedule",
+          "display": { "order": 2, "type": "button" }
         }, {
-          "id": 3, "title": "Speakers"
+          "id": 3, 
+          "title": "Speakers",
+          "display": { "order": 3, "type": "button" }
         }, {
-          "id": 4, "title": "Sponsors"
+          "id": 4, 
+          "title": "Sponsors",
+          "display": { "order": 4, "type": "button" }
         }, {
-          "id": 5, "title": "Exhibit Map"
+          "id": 5, 
+          "title": "Exhibit Map",
+          "display": { "order": 5, "type": "button" }
         }, {
-          "id": 6, "title": "Transportation"
+          "id": 6, 
+          "title": "Transportation",
+          "display": { "order": 6, "type": "button" }
         }, {
-          "id": 7, "title": "Eat•See•Shop•Sip"
+          "id": 7, 
+          "title": "Eat•See•Shop•Sip",
+          "display": { "order": 7, "type": "button" }
+        }, {
+          "id": 8, 
+          "title": "Email Us",
+          "display": { "order": 1, "type": "toptab" }
+        }, {
+          "id": 9, 
+          "title": "Call Us",
+          "display": { "order": 2, "type": "toptab" }
+        }, {
+          "id": 10, 
+          "title": "Find Us",
+          "display": { "order": 3, "type": "toptab" }
+        }, {
+          "id": 11, 
+          "title": "mSurvey",
+          "display": { "order": 1, "type": "bottomtab" }
+        }, {
+          "id": 12, 
+          "title": "More Info",
+          "display": { "order": 2, "type": "bottomtab" }
+        }, {
+          "id": 13, 
+          "title": "Home",
+          "display": { "order": 3, "type": "bottomtab" }
+        }, {
+          "id": 14, 
+          "title": "Index",
+          "display": { "type": "index" }
         }]
-
-### Create a Note [POST]
-+ Request (application/json)
-
-        { "title": "Buy cheese and bread for breakfast." }
-
-+ Response 201 (application/json)
-
-        { "id": 3, "title": "Buy cheese and bread for breakfast." }
 
 ## Note [/notes/{id}]
 A single Note object with all its details

@@ -36,67 +36,92 @@ Events related resources of the **Event Guide API**
 Pages related resources of the **Event Guide API**
 
 ## Pages Collection [/events/{event_id}/pages.json]
+
++ Model (application/json)
+    + Body
+
+            [{
+              "id": 1,
+              "title": "General Info",
+              "display": { "order": 1, "type": "button" }
+            }, {
+              "id": 2, 
+              "title": "Schedule",
+              "display": { "order": 2, "type": "button" }
+            }, {
+              "id": 3, 
+              "title": "Speakers",
+              "display": { "order": 3, "type": "button" }
+            }, {
+              "id": 4, 
+              "title": "Sponsors",
+              "display": { "order": 4, "type": "button" }
+            }, {
+              "id": 5, 
+              "title": "Exhibit Map",
+              "display": { "order": 5, "type": "button" }
+            }, {
+              "id": 6, 
+              "title": "Transportation",
+              "display": { "order": 6, "type": "button" }
+            }, {
+              "id": 7, 
+              "title": "Eat•See•Shop•Sip",
+              "display": { "order": 7, "type": "button" }
+            }, {
+              "id": 8, 
+              "title": "Email Us",
+              "display": { "order": 1, "type": "toptab" }
+            }, {
+              "id": 9, 
+              "title": "Call Us",
+              "display": { "order": 2, "type": "toptab" }
+            }, {
+              "id": 10, 
+              "title": "Find Us",
+              "display": { "order": 3, "type": "toptab" }
+            }, {
+              "id": 11, 
+              "title": "mSurvey",
+              "display": { "order": 1, "type": "bottomtab" }
+            }, {
+              "id": 12, 
+              "title": "More Info",
+              "display": { "order": 2, "type": "bottomtab" }
+            }, {
+              "id": 13, 
+              "title": "Home",
+              "display": { "order": 3, "type": "bottomtab" }
+            }, {
+              "id": 14, 
+              "title": "Index",
+              "display": { "type": "index" }
+            }]
+
 ### List all Pages [GET]
 
 + Parameters
-    + event_id (required, number, `1`) Numeric `id` of the event to show the events.
+    + event_id (required, number, `1`) Numeric `id` of the event to show the pages.
+
++ Response 200 (application/json)
+    [Page Collection][]
+
+## Page [/events/{event_id}/pages/{id}.json]
+
++ Model (application/json)
+    + Body
+            {
+              "id": 1,
+              "title": "General Info",
+              "display": { "order": 1, "type": "button" }
+            }
+
+### Fetch a Page [GET]
+
++ Parameters
+    + event_id (required, number, `1`) Numeric `id` of the event this page belongs to.
+    + id (required, number, `1`) Numeric `id` of the page to show.
 
 + Response 200 (application/json)
 
-        [{
-          "id": 1,
-          "title": "General Info",
-          "display": { "order": 1, "type": "button" }
-        }, {
-          "id": 2, 
-          "title": "Schedule",
-          "display": { "order": 2, "type": "button" }
-        }, {
-          "id": 3, 
-          "title": "Speakers",
-          "display": { "order": 3, "type": "button" }
-        }, {
-          "id": 4, 
-          "title": "Sponsors",
-          "display": { "order": 4, "type": "button" }
-        }, {
-          "id": 5, 
-          "title": "Exhibit Map",
-          "display": { "order": 5, "type": "button" }
-        }, {
-          "id": 6, 
-          "title": "Transportation",
-          "display": { "order": 6, "type": "button" }
-        }, {
-          "id": 7, 
-          "title": "Eat•See•Shop•Sip",
-          "display": { "order": 7, "type": "button" }
-        }, {
-          "id": 8, 
-          "title": "Email Us",
-          "display": { "order": 1, "type": "toptab" }
-        }, {
-          "id": 9, 
-          "title": "Call Us",
-          "display": { "order": 2, "type": "toptab" }
-        }, {
-          "id": 10, 
-          "title": "Find Us",
-          "display": { "order": 3, "type": "toptab" }
-        }, {
-          "id": 11, 
-          "title": "mSurvey",
-          "display": { "order": 1, "type": "bottomtab" }
-        }, {
-          "id": 12, 
-          "title": "More Info",
-          "display": { "order": 2, "type": "bottomtab" }
-        }, {
-          "id": 13, 
-          "title": "Home",
-          "display": { "order": 3, "type": "bottomtab" }
-        }, {
-          "id": 14, 
-          "title": "Index",
-          "display": { "type": "index" }
-        }]
+    [Page][]

@@ -11,25 +11,24 @@ Events related resources of the **Event Guide API**
 
 + Response 200 (application/json)
 
-        [{
-          "id": 1,
-          "name": "IHG Conference",
-          "pages": { }
-        }]
+    [[Event][]]
 
 ## Event [/events/{id}.json]
-### Show an Event [GET]
 
-+ Parameters
-    + id (required, number, `1`) Numeric `id` of the event.
-
-+ Response 200 (application/json)
++ Model (application/json)
 
         {
           "id": 1,
           "name": "IHG Conference",
           "pages": {}
         }
+
+### Show an Event [GET]
+
++ Parameters
+    + id (required, number, `1`) Numeric `id` of the event.
+
++ Response 200 (application/json)
 
 # Group Pages
 Pages related resources of the **Event Guide API**

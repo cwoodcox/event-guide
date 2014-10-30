@@ -5,6 +5,7 @@ class CreatePages < ActiveRecord::Migration
       t.string :display_type
       t.integer :display_order
       t.text :content
+      t.references :event
 
       t.timestamps
     end
